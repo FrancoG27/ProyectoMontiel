@@ -1,0 +1,291 @@
+
+
+body {
+  background: linear-gradient(to bottom right, #9ed8f6, #3a8fd1);
+  font-family: 'Cherry Bomb One', cursive;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+h1, h3 {
+  color: #fff;
+  font-family: "Press Start 2P", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #fff;
+  text-align: center;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+input[type="text"]::placeholder {
+  color: #ccc; 
+}
+
+input[type="text"]:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #00ffcc; 
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+}
+
+button {
+  background: linear-gradient(135deg, #f0a522, #f0a522);
+  color: #fff;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px 0;
+  width: 80%; 
+  font-family: "Press Start 2P", sans-serif;
+  display: flex;           /* Centrar el contenido del botón */
+  justify-content: center; /* Centrar texto horizontalmente */
+}
+
+button:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+  background: linear-gradient(135deg, #483d8b, #3700b3); 
+}
+
+button:nth-child(6) {
+  background: linear-gradient(135deg, #ff5733, #c70039);
+}
+
+button:nth-child(6):hover {
+  background: linear-gradient(135deg, #c70039, #900c3f);
+}
+
+h2, h3, h4 {
+  font-family: "Press Start 2P", sans-serif;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  color: #e2cccc;
+}
+
+h4 {
+  font-weight: 400;
+  color: #8382e7;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  color: #1c1818;
+}
+
+
+
+/* Posicionamiento absoluto a la derecha */
+#header-image {
+  position: fixed;   /* Fijar la imagen para que esté en la pantalla */
+  top: 20px;         /* Separación desde el borde superior */
+  right: 20px;       /* Separación desde el borde derecho */
+  width: 200px;      /* Ancho de la imagen */
+  z-index: 1000;     /* Asegurarse de que la imagen esté por encima del contenido */
+}
+
+#header-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);  /* Sombra para darle profundidad */
+}
+
+/* Asegurar que el contenido debajo no se superponga */
+#root {
+  margin-right: 320px;  /* Añadir espacio para que el contenido no quede detrás de la imagen */
+  padding-top: 50px;    /* Separación del contenido con el borde superior */
+}
+
+a {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  color: #e2cccc;
+  margin-bottom: 10px;
+}
+
+#root {
+  background: rgba(0, 0, 0, 0.75); 
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 6px solid #fff; 
+  display: grid;
+  place-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+#pregunta {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 48px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.respuesta {
+  width: 80%;
+  font-size: 24px;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ff9f1a;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;           /* Centrar el contenido del botón */
+  justify-content: center; /* Centrar texto horizontalmente */
+}
+
+.respuesta:hover {
+  background-color: #e07d16;
+}
+
+.respuesta-correcta {
+  background-color: #28a745; /* Verde para respuestas correctas */
+  color: white;
+  border-color: #28a745;
+  transform: scale(1.1);
+}
+
+.respuesta-incorrecta {
+  background-color: #dc3545; /* Rojo para respuestas incorrectas */
+  color: white;
+  border-color: #dc3545;
+  transform: scale(1.1);
+}
+
+.respuesta.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#nickname {
+  border: none;
+  height: 30px;
+  background-color: gainsboro;
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  width: 25%;
+  text-align: center;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  #pregunta {
+    font-size: 24px;
+  }
+
+  .respuesta {
+    font-size: 18px;
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+  }
+}
+
+
+#toggle-music-btn {
+  position:relative;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;  
+  height: 60px; 
+  font-size: 26px;  
+  cursor: pointer;
+  display: flex; 
+  justify-content: center;  
+  align-items: center;  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 9999; 
+}
+
+#toggle-music-btn:hover {
+  background-color: #555;  
+}
+
+#toggle-music-btn:focus {
+  outline: none;  
+}
+

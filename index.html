@@ -2,50 +2,41 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Puntos</title>
+    <title>Juego Preguntas</title>
+    
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <audio id="background-music" autoplay loop>
+        <source src="stranger-things-124008.mp3" type="audio/mpeg">
+    </audio>
+    <button id="toggle-music-btn" onclick="toggleMusic()">🎵</button>
+    <audio id="correct-sound">
+        <source src="going-to-the-next-level-114480.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    
+    <audio id="incorrect-sound">
+        <source src="ui-message-243464.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
 </head>
+
 <body>
-    <h1>Registro de Puntos</h1>
-    <form id="scoreForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="points">Puntos:</label>
-        <input type="number" id="points" name="points" required>
-        
-        <button type="submit">Registrar</button>
-    </form>
+    <div id="header-image">
+        <img src="TSITI-LOGO.png" alt="Encabezado del Juego" />
+    </div>
 
-    <script>
-        document.getElementById('scoreForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío normal del formulario
+    
 
-            const name = document.getElementById('name').value;
-            const points = document.getElementById('points').value;
-
-            fetch('http://localhost:3000/submit', { // Asegúrate de que esta URL sea correcta
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, points })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error en la respuesta del servidor');
-                }
-                return response.text();
-            })
-            .then(data => {
-                alert(data);
-                document.getElementById('scoreForm').reset(); // Resetear el formulario
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Ocurrió un error al registrar los datos.');
-            });
-        });
-    </script>
+    <div id="root"></div>
+    <script src="models/modelo.js"></script>
+    <script src="src/menu.js"></script>
+    <script src="src/juego.js"></script>
+    <script src="src/historico.js"></script>
 </body>
+<div id="contenedor-preguntas"></div>
 </html>
